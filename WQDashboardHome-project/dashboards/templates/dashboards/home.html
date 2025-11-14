@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+{% load static %}
+{{ project.description|safe}}
+
+<div class="container-fluid text-center">
+    <div style="background-color: #3A444A;" class="row">
+        <div class="col-sm-3">
+            <img src="static/dashboards/new_logo.png" height="100px" width="200px" align="left">    
+        </div>
+        
+        <div class="col-sm-6">
+            <br>
+            <h1 style="color: #FFFFFF;">Scientific Research and Developement Group</h1>    
+        </div>
+
+        <div class="col-sm-3">
+
+        </div>
+        
+        <br> 
+    </div>
+</div>    
+
+    
+<div class="container text-center">
+    <br>
+    <h2>About the Program</h2>
+    <p>The Scientific Research and Developement Group is nested within the Oklahoma Conservation Commission's Water Quality Division. 
+        The mission of the program is to manage and assess collected data and report to policy makers, conservation partners, and the general
+        public.          
+    </p>
+    <h2>Monitoring</h2>
+    <p>There are multiple sources of monitoring data that the Scientific Research and Developement Group manages. 
+        The Rotating Basin Monitoring Program is the largest program in the Water Quality Division and is tasked with monitoring 
+        non-point source pollution in wadeable streams across the state. The Rotating Basin Monitoring Program has been collecting 
+        physical, chemical, and biotic parameters and reports to the U.S. Environmental Protection Agency (EPA). Each year the Scientific 
+        Reasearch and Developement Group creates a <a href="https://occwaterquality.shinyapps.io/Rotating_Basin_Report_app/" 
+        target="_blank">Rotating Basin Report</a> that presents recent status and trends of monitored streams as well as potenial stressors to 
+        those streams. Additional biotic monitoring data is obtained through the Blue Thumb Program, although their mission is education and 
+        outreach rather than formal reporting. Blue Thumb uses the same EPA approved methods as the Rotating Basin Monitoring Program to collect 
+        macroinvertebrates and fish. The Scientific Research and Developement Group uses data from both programs to inform the State Integrated
+        Report every two years. These data are available at the <a href="https://occwaterquality.shinyapps.io/OCC-app23b/">Water Quality Data 
+        Portal</a>. Although there is not currently a continuous wetlands monitoring protocol, the Oklahoma Conservation Commission's Wetlands 
+        Program has created <a href="https://occwaterquality.shinyapps.io/OKRAM/">Wetlands Assessment Protocol</a> that allows the state's wetlands 
+        to graded in a simialr manner as wadeable streams.
+    </p>
+
+</div>
+
+<div class="container text-center">        
+
+    <div class = "row">
+
+        <div class="col-sm-4">
+            <h4>{{ rbr.title }}</h4>
+            <img src="{{ rbr.image.url }}" height = 150 width = 300>
+            <br>
+            <a href="{{ rbr.url }}" target="_blank">Go to Dashboard</a>
+            <p>{{ rbr.description }}</p>
+            
+        </div>
+
+        <div class="col-sm-4">
+            <h4>{{ okram.title }}</h4>
+            <img src="{{ okram.image.url }}" height = 150 width = 300>
+            <br>
+            <a href="{{ okram.url }}" target="_blank">Go to Dashboard</a>
+            <p>{{ okram.description }}</p>
+        </div>
+
+        <div class="col-sm-4">
+            <h4>{{ dataPort.title }}</h4>
+            <img src="{{ dataPort.image.url }}" height = 150 width = 300>
+            <br>
+            <a href="{{ dataPort.url }}" target="_blank">Go to Dashboard</a>
+            <p>{{ dataPort.description }}</p>
+        </div>
+
+    </div>
+
+
+</div>
+    
+<div class="container text-center">
+    <br>
+    <br>
+    <h2>Planning and Restoration</h2>
+    <p> In addition to monitoring, the Scientific Research and Developement Group uses monitoring data to inform restoration activities. The 
+        <a href="https://occwaterquality.shinyapps.io/UWA_app2/">Unified Watershed Assessment</a>
+        considered measured water quality data along with man-made and natural landscape features to rank watersheds (12-digit hydrological units) based on the need for 
+        restoration or protection. At a finer scale, the <a href="https://occwaterquality.shinyapps.io/RWIP2/">Restorable Streams and Wetlands Protocol</a> highlights 
+        the need and feasibility of restoration on wetlands and stream segments across the state. The dashboards are meant to serve as tools to identify ideal project 
+        locations for conservation programs. 
+    </p>
+
+    <div class = "row">
+
+        <div class="col-sm-6">
+            <h4>{{ uwa.title }}</h4>
+            <img src="{{ uwa.image.url }}" height = 150 width = 300>
+            <br>
+            <a href="{{ uwa.url }}" target="_blank">Go to Dashboard</a>
+            <p>{{ uwa.description }}</p>
+        </div>
+
+        <div class="col-sm-6">
+            <h4>{{ rwip.title }}</h4>
+            <img src="{{ rwip.image.url }}" height = 150 width = 300>
+            <br>
+            <a href="{{ rwip.url }}" target="_blank">Go to Dashboard</a>
+            <p>{{ rwip.description }}</p>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+</div>
